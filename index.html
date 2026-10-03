@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="buttons.css" />
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <header class="header-main">
+      <nav class="header-left">
+        <a class="nav-link-item">CSS VISUAL</a>
+      </nav>
+      <nav class="header-right">
+        <a href="index.html" class="nav-link-item">[ Головна ]</a>
+        <a href="about.html" class="nav-link-item">[ Інформація ]</a>
+        <a href="stats.html" class="nav-link-item">[ Статистика ]</a>
+        <a href="#" class="nav-link-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title>github</title><path fill="currentColor" d="M11.963 2.382C.554 2.621-1.82 17.93 8.852 21.602c.498.093.684-.219.684-.478v-1.68c-2.79.601-3.38-1.317-3.38-1.317a2.6 2.6 0 0 0-1.121-1.442c-.902-.612.072-.602.072-.602a2.07 2.07 0 0 1 1.536 1.038a2.167 2.167 0 0 0 2.924.819c.052-.5.275-.965.633-1.317c-2.23-.25-4.564-1.1-4.564-4.875a3.76 3.76 0 0 1 1.038-2.645a3.46 3.46 0 0 1 .103-2.634s.84-.26 2.76 1.037a9.6 9.6 0 0 1 5.02 0c1.908-1.276 2.748-1.038 2.748-1.038c.365.828.398 1.763.093 2.614a3.75 3.75 0 0 1 1.037 2.645c0 3.786-2.344 4.626-4.574 4.865c1.038.55.602 4.086.664 4.522c0 .259.176.57.695.477c10.642-3.64 8.152-18.97-3.257-19.209"/></svg></a>
+    </header>
+<main class="app-layout">
+
+    <!-- 2. Левая панель (Controls) -->
+  <aside class="panel controls-panel">
+    <h2>Controls</h2>
+    <div class="control-options">
+      <!-- БЛЮР-->
+      <div  id="blur-section" class="accordion blur">
+        <button id="toggle-blur" class="section-name">Blur</button>
+        <div class="section-content">
+          <label for="blur-bg">Background blur:</label><br>
+          <input type="range" id="blur-bg" min="0" max="50" value="10" step="1">
+          <span id="value-bg-blur">10px</span>
+
+          <label for="opacity-bg">Background opacity:</label><br>
+          <input type="range" id="opacity-bg" min="0" max="1" value="0.2" step="0.01">
+          <span id="value-bg-opacity">0.2</span>
+        </div>
+        </div>
+         <!-- ЦВЕТ -->
+        <div id="color-section" class="accordion color">
+        <button id="toggle-color" class="section-name">Color</button>
+        <div class="section-content">
+           <!-- Красный -->
+          <label for="red">Red:</label><br>
+          <input type="range" id="red" min="0" max="255" value="225" step="1">
+          <span id="value-color-r">225</span><br>
+           <!-- Зелёный -->
+          <label for="green">Green:</label><br>
+          <input type="range" id="green" min="0" max="255" value="225" step="1">
+          <span id="value-color-g">225</span><br>
+           <!-- Синий -->
+          <label for="blue">Blue:</label><br>
+          <input type="range" id="blue" min="0" max="255" value="225" step="1">
+          <span id="value-color-b">225</span>
+        </div>
+        </div>
+         <!-- ТЕНИ -->
+        <div id="shadow-section" class="accordion shadow">
+        <button id="toggle-shadow" class="section-name">Shadow</button>
+        <div class="section-content">
+           <!-- Позиция X -->
+          <label for="x-pos">X</label><br>
+          <input type="range" id="x-pos" min="-100" max="100" value="0" step="1">
+          <span id="value-color-r">0</span><br>
+           <!-- Позиция Y -->
+          <label for="y-pos">Y</label><br>
+          <input type="range" id="y-pos" min="-100" max="100" value="0" step="1">
+          <span id="value-color-r">0</span><br>
+           <!-- блюр -->
+          <label for="y-pos">Y</label><br>
+          <input type="range" id="y-pos" min="-100" max="100" value="0" step="1">
+          <span id="value-color-r">0</span><br>
+           <!-- Расстяжение -->
+
+           <!-- RGB #2 -->
+        </div>
+      </div>
+    </div> 
+  </aside>
+
+  <!-- 3. Центр верх (Preview) -->
+  <section class="panel preview-panel">
+    <h2>Central Preview</h2>
+    <div class="preview-area">
+    <div id="box"></div>
+    </div>
+  </section>
+
+  <!-- 4. Центр низ (Generated Code) -->
+  <section class="panel code-panel">
+    <h2>Generated CSS Code</h2>
+  </section>
+
+  <!-- 5. Правая панель (Presets) -->
+  <aside class="panel presets-panel">
+    <h2>Quick Presets</h2>
+  </aside>
+</main>
+<footer>
+
+</footer>
+<script src="logic.js" defer></script>    
+</body>
+</html>

@@ -38,7 +38,7 @@
           <span id="value-bg-opacity">0.2</span>
         </div>
         </div>
-         <!-- ЦВЕТ -->
+         <!-- RGB -->
         <div id="color-section" class="accordion color">
         <button id="toggle-color" class="section-name">Color</button>
         <div class="section-content">
@@ -62,19 +62,40 @@
         <div class="section-content">
            <!-- Позиция X -->
           <label for="x-pos">X</label><br>
-          <input type="range" id="x-pos" min="-100" max="100" value="0" step="1">
-          <span id="value-color-r">0</span><br>
+          <input type="range" id="x-pos" min="-50" max="50" value="0" step="1">
+          <span id="value-pos-x">0px</span><br>
            <!-- Позиция Y -->
           <label for="y-pos">Y</label><br>
-          <input type="range" id="y-pos" min="-100" max="100" value="0" step="1">
-          <span id="value-color-r">0</span><br>
+          <input type="range" id="y-pos" min="-50" max="50" value="0" step="1">
+          <span id="value-pos-y">0px</span><br>
            <!-- блюр -->
-          <label for="y-pos">Y</label><br>
-          <input type="range" id="y-pos" min="-100" max="100" value="0" step="1">
-          <span id="value-color-r">0</span><br>
+          <label for="shadow-blur">Shadow blur</label><br>
+          <input type="range" id="shadow-blur" min="0" max="50" value="15" step="1">
+          <span id="value-shadow-blur">0px</span><br>
+           <!-- Альфа -->
+          <label for="shadow-opacity">Shadow opacity</label><br>
+          <input type="range" id="shadow-opacity" min="0" max="1" value="0.2" step="0.01">
+          <span id="value-shadow-opacity">0.2</span><br>
            <!-- Расстяжение -->
-
+          <label for="shadow-spread">Shadow spread</label><br>
+          <input type="range" id="shadow-spread" min="-20" max="20" value="0" step="1">
+          <span id="value-shadow-spread">0px</span><br>
            <!-- RGB #2 -->
+           <!-- Красный -->
+          <label for="red-shdw">Red:</label><br>
+          <input type="range" id="red-shdw" min="0" max="255" value="225" step="1">
+          <span id="value-color-r-shdw">225</span><br>
+           <!-- Зелёный -->
+          <label for="green-shdw">Green:</label><br>
+          <input type="range" id="green-shdw" min="0" max="255" value="225" step="1">
+          <span id="value-color-g-shdw">225</span><br>
+           <!-- Синий -->
+          <label for="blue-shdw">Blue:</label><br>
+          <input type="range" id="blue-shdw" min="0" max="255" value="225" step="1">
+          <span id="value-color-b-shdw">225</span><br>
+           <!-- inert -->
+          <label for="shadow-inset">Inset</label>
+          <input type="checkbox" id="shadow-inset">
         </div>
       </div>
     </div> 
@@ -90,6 +111,7 @@
 
   <!-- 4. Центр низ (Generated Code) -->
   <section class="panel code-panel">
+  <pre><code id="code-output"></code></pre>
     <h2>Generated CSS Code</h2>
   </section>
 

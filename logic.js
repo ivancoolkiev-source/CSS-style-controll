@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /*-- COLOR PICKER --*/
     let pickerBg = new iro.ColorPicker('#color-picker', {
-        width: 175,
+        width: 150,
         color: `rgb(${r}, ${g}, ${b})` // Начальный цвет берем из переменных
     });
 
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /*-- SHADOW COLOR PICKER --*/
     let pickerShadow = new iro.ColorPicker('#color-picker-shadow', {
-        width: 175,
+        width: 150,
         color: `rgb(${shadowR}, ${shadowG}, ${shadowB})`
     });
 

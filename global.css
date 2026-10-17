@@ -33,16 +33,18 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
 }
 /*-- PANELS VISUAL --*/
 #box {
   backdrop-filter: blur(10px);
   background-color: rgb(255, 255, 255, 0.2);
-  border: 2px solid #242839;
+  border: 2px solid #19191d;
   border-radius: 12px;
-  width: 500px;
-  height: 350px;
-  box-shadow: 0px 10px 15px 10px rgba(255, 0, 0, 0.863);
+  width: 50%;
+  height: 50%;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2) ;
 }
 
 .section-name {
@@ -59,25 +61,41 @@ body {
   gap: 10px;
   flex-direction: column;
 }
+/*-- PRESET IMAGES --*/
+.bg-image {
+  border-radius: 5px;
+  height: 20%;
+  width: 100%;
+}
 
-
+.plains {
+background-image: url(plains.jpg);
+background-size: cover;
+}
+.sky {
+background-image: url(Sky.jpg);
+background-size: cover;
+}
+.colors {
+background-image: url(plains.jpg);
+background-size: cover;
+}
 /*-- GRID --*/
 .app-layout {
   display: grid;
-  /* 3 колонки: Левая (300px), Центр (растягивается), Правая (260px) */
   grid-template-columns: 300px 1fr 260px;
-  
-  /* 2 строки: Верхняя растягивается, нижняя подстраивается под высоту кода */
   grid-template-rows: 1fr auto;
-  
-  gap: 16px;          /* Отступы между блоками */
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 16px;
   padding: 20px;
-  flex: 1;            /* Занимает всю оставшуюся высоту экрана */
+  flex: 1; 
+  min-height: 0;
 }
 
 .controls-panel {
-  grid-column: 1;     /* 1-я колонка */
-  grid-row: 1 / 3;    /* Занимает обе строки (с 1 по 3 линию) */
+  grid-column: 1;
+  grid-row: 1 / 3;
+  overflow-y: auto;
 }
 
 .preview-panel {
@@ -85,7 +103,7 @@ body {
   grid-row: 1;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* чтобы картинка не вылезала за скругления */
+  overflow: hidden;
 }
 
 .preview-area {
@@ -103,6 +121,10 @@ body {
 .presets-panel {
   grid-column: 3;
   grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 7%;
+  overflow-y: auto;
 }
 
 .panel {
@@ -110,4 +132,17 @@ body {
   border: 2px solid #242839;
   border-radius: 12px;
   padding: 20px;
+}
+
+/* --- SCROLL VISUAL --- */
+.controls-panel::-webkit-scrollbar-thumb {
+    background-color: #3b425b;
+    border-radius: 10px;
+}
+.controls-panel::-webkit-scrollbar-thumb:hover {
+    background: #5a6382;
+}
+.controls-panel {
+    scrollbar-width: thin;
+    scrollbar-color: #3b425b transparent;
 }

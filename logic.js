@@ -79,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
     /*-- CHECKER --*/
 
     opacityBg.oninput = updateColor;
-
     xPos.oninput = updateShadow;
     yPos.oninput = updateShadow;
     shadowBlur.oninput = updateShadow;
@@ -148,8 +147,6 @@ document.addEventListener('DOMContentLoaded', () => {
     box-shadow: ${xPos.value}px ${yPos.value}px ${shadowBlur.value}px ${shadowSpread.value}px rgba(${shadowR}, ${shadowG}, ${shadowB}, ${shadowOpacity.value}) ${shadowInset.checked ? 'inset' : ''};
 }`;
     }
-
-
 
     updateColor();
     updateShadow();

@@ -12,6 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let box = document.getElementById('box');
     let codeOutput = document.getElementById('code-output');
 
+    /*-- Background --*/
+    let Plains = document.getElementById('bg-plains')
+    let Sky = document.getElementById('bg-sky')
+    let Colors = document.getElementById('bg-colors')
+
     /*-- Color --*/
     let colorButton = document.getElementById('toggle-color');
     let colorOpen = document.getElementById('color-section');
@@ -83,6 +88,19 @@ document.addEventListener('DOMContentLoaded', () => {
     shadowInset.oninput = updateShadow;
 
     /*-- FUNCTIONS --*/
+
+    Sky.onclick = function () {
+    document.getElementById('previewPanel').style.backgroundImage = 'url("sky.jpg")';
+    }
+
+    Plains.onclick = function () {
+    document.getElementById('previewPanel').style.backgroundImage = 'url("plains.jpg")';
+    }
+    
+    Colors.onclick = function () {
+    document.getElementById('previewPanel').style.backgroundImage = 'url("colors_bg.jpg")';
+    }
+    
     blurBg.oninput = function() {
         blurBgValue.textContent = blurBg.value + 'px'; // Обновляем текст рядом с ползунком
         box.style.backdropFilter = 'blur(' + blurBg.value + 'px)'; // Применяем размытие
@@ -130,6 +148,8 @@ document.addEventListener('DOMContentLoaded', () => {
     box-shadow: ${xPos.value}px ${yPos.value}px ${shadowBlur.value}px ${shadowSpread.value}px rgba(${shadowR}, ${shadowG}, ${shadowB}, ${shadowOpacity.value}) ${shadowInset.checked ? 'inset' : ''};
 }`;
     }
+
+
 
     updateColor();
     updateShadow();

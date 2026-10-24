@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let Plains = document.getElementById('bg-plains')
     let Sky = document.getElementById('bg-sky')
     let Colors = document.getElementById('bg-colors')
+    let Dark = document.getElementById('bg-dark')
 
     /*-- Color --*/
     let colorButton = document.getElementById('toggle-color');
@@ -98,6 +99,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     Colors.onclick = function () {
     document.getElementById('previewPanel').style.backgroundImage = 'url("colors_bg.jpg")';
+    }
+
+    Dark.onclick = function () {
+    const panel = document.getElementById('previewPanel');
+    panel.style.backgroundColor = '#0a0b11';
+    panel.style.backgroundImage = 'none';
     }
     
     blurBg.oninput = function() {

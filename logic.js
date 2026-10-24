@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /*-- COLOR PICKER --*/
     let pickerBg = new iro.ColorPicker('#color-picker', {
         width: 150,
-        color: `rgb(${r}, ${g}, ${b})` // Начальный цвет берем из переменных
+        color: `rgb(${r}, ${g}, ${b})`
     });
 
     pickerBg.on('color:change', function(color) {
@@ -101,8 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     blurBg.oninput = function() {
-        blurBgValue.textContent = blurBg.value + 'px'; // Обновляем текст рядом с ползунком
-        box.style.backdropFilter = 'blur(' + blurBg.value + 'px)'; // Применяем размытие
+        blurBgValue.textContent = blurBg.value + 'px';
+        box.style.backdropFilter = 'blur(' + blurBg.value + 'px)';
         updateCode(); // Обновляем код внизу
     }
 

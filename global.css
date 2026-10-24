@@ -55,11 +55,11 @@ body {
 @keyframes slideDown {
     from {
         opacity: 0;
-        transform: translateY(-10px); /* Начинаем на 10px выше */
+        transform: translateY(-10px);
     }
     to {
         opacity: 1;
-        transform: translateY(0);     /* Встаем на свое место */
+        transform: translateY(0);
     }
 }
 
